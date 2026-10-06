@@ -1,0 +1,118 @@
+name: Bug report
+description: Something in TagEventBus does not behave as documented.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The fields below are what makes a report
+        reproducible — see
+        [Documentation/project/issues.md](https://github.com/StillCooking/TagEventBus/blob/main/Documentation/project/issues.md).
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before reporting
+      description: These three causes account for most "it does not work" reports.
+      options:
+        - label: The tag exists in the project's Gameplay Tag list (Project Settings → Project → GameplayTags).
+          required: true
+        - label: The sender and the receiver use the same `Scope` — `Global` and `Local` are two disjoint registries.
+          required: true
+        - label: A listener bound to a parent tag uses `Match = Partial`.
+          required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: The `VersionName` field in `TagEventBus.uplugin`, or the heading in `CHANGELOG.md`.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: engine-version
+    attributes:
+      label: Engine version
+      options:
+        - "5.5"
+        - "5.6"
+        - "5.7"
+        - "5.8"
+        - Other (state it below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: configuration
+    attributes:
+      label: Build configuration
+      description: The available features and diagnostics differ between them.
+      options:
+        - Development Editor
+        - Development
+        - Shipping
+        - Other (state it below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Global (GameInstance subsystem)
+        - Local (per-actor component)
+        - Both / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: What you expected, and what happened
+      placeholder: |
+        Expected: the widget receives Combat.Hit with the payload the actor broadcast.
+        Actual: Broadcast returns 0 deliveries and the widget's event never fires.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest sequence that shows the problem. Blueprint screenshots or a C++ snippet both work.
+      placeholder: |
+        1. Register the tag Combat.Hit.
+        2. In the widget, Bind Tag Event (Global, Exact) to Combat.Hit.
+        3. In the actor, Broadcast Tag Event on Combat.Hit with FDamageInfo.
+        4. Play in editor.
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: |
+        `TagEventBus.Log.Preset Verbose`, reproduce, then `TagEventBus.Log.Reset`. Paste the relevant
+        excerpt — a Verbose log is usually enough on its own for a diagnosis.
+      render: text
+
+  - type: textarea
+    id: debugger
+    attributes:
+      label: Debugger evidence (global scope)
+      description: |
+        From **Tools → Debug → TagEventBus Debug**: the delivery count from a manual broadcast on the
+        Inject tab, and whether the intended receiver got it. A screenshot of the Overview or Live
+        tab helps too. The panel does not show a local bus — for `Local` scope, the log above is what
+        matters.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Other plugins involved, whether it reproduces in an empty project, when it started.

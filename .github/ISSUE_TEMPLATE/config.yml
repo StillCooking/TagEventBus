@@ -1,0 +1,20 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: "https://stillcooking.dev/en/products/tageventbus/docs/"
+    about: Installation, the API reference, recipes and the FAQ — most questions are answered here.
+  - name: Common problems
+    url: https://github.com/StillCooking/TagEventBus/blob/main/Documentation/troubleshooting/common-problems.md
+    about: Symptom-by-symptom list. Worth a minute before filing a bug.
+  - name: Questions and ideas
+    url: https://github.com/StillCooking/TagEventBus/discussions
+    about: "\"How do I…\" questions and loose ideas belong in Discussions, not in an issue."
+  - name: Buy the plugin
+    url: "https://www.fab.com/"
+    about: "TagEventBus on Fab — purchase, license options, engine versions."
+  - name: Purchase, invoices and licensing
+    url: "https://stillcooking.dev/en/support/"
+    about: Not public matters. Use the support form, or write to owner@stillcooking.dev.
+  - name: Security vulnerability
+    url: "mailto:owner@stillcooking.dev"
+    about: Never in a public issue. Write with the details and the engine version.

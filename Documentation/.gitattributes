@@ -1,0 +1,3 @@
+# Documentation is hand-written and CRLF throughout. Pinning it here keeps a checkout on
+# any platform from rewriting a page to LF and turning one edited line into a whole-file diff.
+*.md text eol=crlf

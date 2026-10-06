@@ -1,0 +1,115 @@
+TagEventBus — Unreal Engine plugin
+Copyright (c) 2026 Hubert Knochowski, code.Matter(). All rights reserved.
+
+License version 1.0, effective October 5, 2026. Applies to plugin version 1.0.0 and
+later, until superseded by a later version of this file.
+
+In this file, "the Author" means Hubert Knochowski, doing business as code.Matter(), Poland.
+
+This repository contains proprietary source code. It is not open source, and it carries
+no permission to use, copy, modify, merge, publish, distribute, sublicense or sell any
+part of it, except as granted below. Obtaining this repository directly — by clone,
+download, fork or any other means — grants nothing: the permissions in this file extend
+only to a holder of a valid purchase made through an authorized channel.
+
+DISTRIBUTED COPIES
+------------------
+
+Copies of this plugin obtained through Fab are governed by the Fab standard license the
+buyer selects at purchase, together with the Fab Marketplace terms. That license — not
+this file — defines what a purchaser may do with the plugin. Where this file and the
+license accompanying a purchased copy disagree, the license accompanying that copy
+governs that copy.
+
+A copy obtained anywhere other than Fab or another channel authorized in writing by the
+Author carries no license at all, and the grant below does not extend to it.
+
+MODIFICATION BY THE PURCHASER
+-----------------------------
+
+A purchaser may modify the source of this plugin and use the modified version in their
+own projects, commercial ones included, on the same terms as the unmodified plugin.
+
+This permission covers use, not distribution. The source stays undistributable whether
+modified or not: it may not be redistributed, published, sublicensed or sold, and a
+modified copy may only leave the purchaser's hands compiled into a product, exactly as
+the unmodified plugin may.
+
+TERMINATION
+-----------
+
+The permissions granted by this file end automatically, without notice, on any breach of
+them. This does not affect the rights a purchaser holds under the license accompanying
+their copy, which ends only on its own terms.
+
+TRADEMARKS
+----------
+
+This license grants no right to use the names "TagEventBus", "StillCooking" or
+"code.Matter()", or any logo or other mark of the Author, to promote a product, to imply
+endorsement or affiliation, or to name a derived work. Factual reference is permitted: a
+purchaser may state that their product uses the plugin, and may credit it.
+
+THIRD-PARTY CODE
+----------------
+
+This plugin contains no third-party code and depends on no marketplace plugins. Every
+module it links is part of Unreal Engine, and the plugin ships no content assets. The
+modules linked by the current version are listed in THIRD-PARTY.md, distributed alongside
+this file, and in the plugin's online documentation.
+
+Use of Unreal Engine itself is governed by the Unreal Engine End User License Agreement.
+
+SUPPORT AND UPDATES
+-------------------
+
+Support and updates are provided at the Author's discretion. This file grants no right to
+either and sets no service level, and no future version of the plugin is guaranteed to be
+released, maintained, or made compatible with any future engine version. Modifications
+made by a purchaser fall outside the scope of support.
+
+NO WARRANTY
+-----------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. THE AUTHOR DOES NOT WARRANT THAT THE SOFTWARE IS ERROR-FREE,
+THAT IT WILL OPERATE WITHOUT INTERRUPTION, OR THAT IT IS FIT FOR ANY PARTICULAR PROJECT.
+
+LIMITATION OF LIABILITY
+-----------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR SHALL NOT BE LIABLE FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, NOR FOR ANY LOSS OF PROFIT,
+REVENUE, DATA, GOODWILL OR BUSINESS, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR ITS USE, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE. THE AUTHOR'S TOTAL AGGREGATE LIABILITY UNDER OR IN CONNECTION WITH THIS LICENSE
+SHALL NOT EXCEED THE AMOUNT ACTUALLY PAID FOR THE COPY OF THE PLUGIN GIVING RISE TO THE
+CLAIM.
+
+Nothing in this file excludes or limits any liability that cannot be excluded or limited
+under applicable law, including liability for damage caused intentionally, and nothing in
+it affects the statutory rights of a consumer.
+
+GOVERNING LAW
+-------------
+
+The permissions granted by this file, and any dispute concerning them, are governed by
+the law of Poland and are subject to the courts having jurisdiction over the Author's
+place of business. The purchase itself is not: a purchased copy is governed by the
+license and marketplace terms accompanying it, and by any mandatory law protecting a
+consumer in their country of residence.
+
+SEVERABILITY
+------------
+
+If any provision of this file is held unenforceable, it applies in the narrowest form
+that is enforceable, or is disregarded if no such form exists. The remaining provisions
+stay in full force.
+
+CONTACT
+-------
+
+Hubert Knochowski, code.Matter()
+Support: owner@stillcooking.dev
+Web: https://stillcooking.dev

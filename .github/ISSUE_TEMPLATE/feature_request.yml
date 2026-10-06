@@ -1,0 +1,46 @@
+name: Feature request
+description: Something TagEventBus should be able to do and cannot.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What is already planned is on the
+        [roadmap](https://github.com/StillCooking/TagEventBus/blob/main/Documentation/project/roadmap.md).
+        Four limits are deliberate and are not going to change: Game Thread only, no replication,
+        every tag must exist in the project's tag list, and the diagnostic layer is excluded from
+        Shipping builds.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and where does the plugin get in the way? Describe the situation, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What you do today instead
+      description: The workaround, and what it costs you — that is usually the strongest argument for the feature.
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: An API sketch, a node name, a setting — as concrete as you can make it.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which surface
+      options:
+        - Blueprints
+        - C++
+        - Both
+        - Editor / debugger
+        - Documentation
+    validations:
+      required: true
