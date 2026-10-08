@@ -3,8 +3,10 @@
 *The subsystem and component API available only in C++: templated `AddListener<T>` and `Broadcast<T>`, `FTagEventContext`, the RAII subscription helpers, and the fluent builder.*
 
 All API calls on this page must be made on the **Game Thread**. The native layer is the fastest
-path — the payload travels as a `const T&`, with no allocation and no `FInstancedStruct` in the
-middle — and it is the only path that reaches the registry directly.
+path — the payload travels as a `const T&` and a native listener reads the caller's own memory,
+with no copy and no `FInstancedStruct` in between — and it is the only path that reaches the
+registry directly. [Blueprint listeners, `bRetain` and deferred delivery still copy the
+payload](../advanced/optimization.md#payload).
 
 The parameters themselves — `Match`, `bOnce`, `bReplaySticky`, `Priority`, `ThrottleSeconds`,
 `Query` — mean exactly what they mean in Blueprint, and the
@@ -39,7 +41,7 @@ outlives its owner.
 ## Broadcasting
 
 ```cpp
-// Typed payload — no allocation, delivered as const T&
+// Typed payload — passed as const T&, native listeners read it without a copy
 template <typename T>
 void Broadcast(FGameplayTag Tag, UObject* Sender, const T& Payload, bool bRetain = false,
     const FGameplayTagContainer& ContextTags = FGameplayTagContainer(), float RetainTTLSeconds = 0.f);
@@ -364,7 +366,7 @@ Bus->Emit(Tag)
     .Retain(5.f)        // sticky; > 0 auto-clears after that many seconds
     .Policy(ETagEventBroadcastPolicy::StopAfterHandled)
     .WithContext(ContextTags)
-    .Now();             // TERMINAL: immediate, zero-copy, returns the delivery count
+    .Now();             // TERMINAL: immediate, no copy for native listeners, returns the delivery count
 // or
     .NowWithResult();   // TERMINAL: the same, but returns FTagEventBroadcastResult
 // or

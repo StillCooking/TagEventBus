@@ -55,7 +55,7 @@ The same discipline applies to the tags in your project: `bDeprecated` in a cont
 
 | Version | Date | Changes                                                                 |
 | --- | --- |-------------------------------------------------------------------------|
-| 1.0.0 | 2026-10-05 | the first release — the core, the debugger, contracts, request-response |
+| 1.0.0 | 2026-10-08 | the first release — the core, the debugger, contracts, request-response |
 
 This release supports UE 5.5 – 5.8. The full list is in the
 [changelog](../../CHANGELOG.md).

@@ -50,6 +50,20 @@ If `Delivered` increases, the injected event reached at least one listener; conf
 reached the intended receiver. If it does not increase, check the tag, the receiver's
 subscription to the global bus, its pause state, and its delivery filters.
 
+## Contracts — coverage and deprecated tags
+
+The Contracts tab shows which of the tags you broadcast are covered by a contract.
+[It lists every tag broadcast in the current PIE session](../advanced/contracts.md#the-panel-view),
+and each row shows the contract the tag resolves to: `Has contract`, `Deprecated` (with
+`yes -> <replacement>` when the contract names a replacement tag), `Domain owner` and
+`Payload rule`. A deprecated tag is drawn in red; since every row was broadcast this session, a
+red row is a deprecated tag still in use.
+
+The tab shows coverage, not violations. A broken contract appears in Live as a red `VIOLATION`
+row with [the same fields as its log line](../advanced/contracts.md#enforcement-levels), even
+when Record history is off. Overview marks the tag with an orange `CONTRACT` badge until the PIE
+session ends or you click **Reset stats**.
+
 ## What the panel remembers
 
 Across editor sessions it keeps the active tab, the tag filters, the sort order in Overview,
@@ -64,11 +78,14 @@ your filters and sorting do not affect the rest of the team.
 
 > [!warning]
 > **The panel sees the global bus only.** It resolves the `UTagEventBusSubsystem` of the <!-- fact:debugger-nie-widzi-busow-lokalnych-panel-rozwiazuje-utageven -->
-> current PIE session; bus components on actors are **not visible** in Overview or in Live,
-> and Inject targets the global bus alone.
+> current PIE session; bus components on actors are **not visible** in Overview, Live or
+> Contracts, and Inject targets the global bus alone.
 >
-> You diagnose problems in `Local` scope with logs and the `Has Matching Listeners` node, not
-> with the panel.
+> The one exception is contract violations. Contract validation serves every bus in the
+> process, so Live also lists `VIOLATION` rows raised on bus components, marked `scope=Local`.
+>
+> You diagnose other problems in `Local` scope with logs and the `Has Matching Listeners` node,
+> not with the panel.
 
 > [!warning]
 > **The panel does not exist in Shipping.** The diagnostic layer is compiled conditionally and

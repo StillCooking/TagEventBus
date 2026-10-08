@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] — 2026-10-05
+## [1.0.0] — 2026-10-08
 
 First release. Unreal Engine 5.5 – 5.8, Win64.
 

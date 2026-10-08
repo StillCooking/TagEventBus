@@ -35,7 +35,7 @@ and the issue tracker.
 - **Two scopes.** A global bus on the `GameInstance`, created automatically, and a local bus as a
   component on an actor — two disjoint registries, not one registry with a filter.
 - **Typed payloads.** Any `USTRUCT`, as `Instanced Struct` in Blueprints and as a `const T&` in
-  C++ — no allocation on the native path.
+  C++, which a native listener reads without a copy.
 - **Sticky events.** A retained broadcast is replayed to listeners that register later and ask for
   it, with an optional TTL.
 - **Automatic cleanup.** Managed listeners unbind when their owner is destroyed; the native

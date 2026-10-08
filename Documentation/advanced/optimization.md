@@ -24,14 +24,16 @@ broadcast every frame should have two levels, not five.
 
 Four forms:
 
-| Form | Where | Allocation |
+| Form | Where | Allocation at the call |
 | --- | --- | --- |
 | the signal alone — an empty `FInstancedStruct` | BP and C++ | none |
 | a wildcard struct — `Broadcast Tag Event Struct` | BP | none |
 | `FInstancedStruct` — `Broadcast Tag Event` | BP | yes |
 | `Broadcast<T>` with `const T&` | C++ | none |
 
-The native template call `Bus->Broadcast<T>(...)` allocates nothing. <!-- fact:natywne-wywolanie-szablonowe-bus-broadcast-t-z-c-jest-zero-a -->
+The native template call `Bus->Broadcast<T>(...)` allocates nothing at the call site: the <!-- fact:natywne-wywolanie-szablonowe-bus-broadcast-t-z-c-jest-zero-a -->
+payload is passed as a `const T&` and is not wrapped in an `FInstancedStruct` before delivery.
+Delivery itself can still copy it.
 
 The main payload-copying costs are: <!-- fact:koszt-kopiowania-payloadu-zalezy-od-sciezki-zero-kopii-dla-n -->
 

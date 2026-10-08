@@ -98,7 +98,7 @@ Broadcasts the same event on every tag in the container.
 
 **Returns:** `int32` — the number of deliveries
 
-Carries any struct through a wildcard pin, **with no allocation**. This is the variant for [hot paths](../advanced/optimization.md) where the cost of wrapping the payload in `FInstancedStruct` matters.
+Carries any struct through a wildcard pin **without wrapping it in an `FInstancedStruct` at the call site**. This is the variant for [hot paths](../advanced/optimization.md) where the cost of that wrapper matters. A Blueprint listener on the channel still gets a copy — [the payload costs](../advanced/optimization.md#payload) list every path.
 
 ## Deferred broadcast
 
