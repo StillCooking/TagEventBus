@@ -24,8 +24,7 @@ request a feature, and read the full documentation without a Fab account and wit
 an email.
 
 **It contains no source code.** The plugin is commercial; the code ships with your purchase. What
-you get here is the documentation exactly as it ships with the plugin, the changelog, the license,
-and the issue tracker.
+you get here is the documentation exactly as it ships with the plugin, the changelog and the issue tracker.
 
 ## What you get in the plugin
 
@@ -98,5 +97,5 @@ Copyright © 2026 Hubert Knochowski, code.Matter(). All rights reserved.
 
 Copies obtained through Fab are governed by the Fab standard license selected at purchase, together
 with the Fab Marketplace terms. You may modify the source and use the modified plugin in your own
-projects, commercial ones included; the source may not be redistributed. Full terms:
-[`LICENSE`](LICENSE) and [`Documentation/project/license.md`](Documentation/project/license.md).
+projects, commercial ones included; the source may not be redistributed. Summary:
+[`Documentation/project/purchase-and-use.md`](Documentation/project/purchase-and-use.md).

@@ -15,7 +15,7 @@ The complete matrix: [Compatibility](../project/compatibility.md).
 compiled for your engine version and works in Blueprint-only and C++ projects alike. Installed
 manually from source, it compiles on your side, so the project has to be a C++ project.
 
-The plugin pulls nothing in from outside the engine: no third-party code and no dependencies on other marketplace plugins. It does depend on the engine's own `GameplayTagsEditor`.
+The plugin pulls nothing in from outside the engine: no third-party code and no dependencies on other marketplace plugins. It does depend on the engine's own `GameplayTagsEditor` plugin — [what that means](../project/compatibility.md#what-the-plugin-requires-of-your-project).
 
 ## Installing from Fab
 

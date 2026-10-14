@@ -1,4 +1,4 @@
-# License
+# Purchase and use
 
 *A copy bought on Fab is governed by the Fab license. You may modify the source for your own use; you may not redistribute the source.*
 
@@ -28,8 +28,7 @@ not this table.
 
 The plugin **does not link against `Boost`, does not require `DirectX` or `OpenGL` beyond what the <!-- fact:plugin-nie-linkuje-boost-nie-wymaga-directx-opengl-ponad-sil -->
 engine already requires, and contains no third-party code**, so it imposes no extra licensing
-conditions on your game and there is no third party whose terms carry over to it. The engine
-modules it links against are listed in `THIRD-PARTY.md`, in the plugin's root directory. The
+conditions on your game and there is no third party whose terms carry over to it. The
 package contains no test code at all — see [Tests](tests.md).
 
 ## Source distribution
@@ -50,11 +49,10 @@ update, which [Updates](updates.md) puts a number on;
 
 ## What binds
 
-This page is a summary; nothing on it overrides **the Fab license that came with your copy**
-or **the `LICENSE` file in the plugin's root directory**. `LICENSE` is where to read the
-warranty disclaimer, the limit of liability, support, names and marks, the governing law —
-and where the line between the two documents is drawn: what a breach of `LICENSE` ends, and
-what it leaves untouched because it belongs to the licence you bought.
+This page is a summary; nothing on it overrides **the Fab license that came with your copy**,
+together with the Fab Marketplace terms. Those are the only terms that govern a purchased copy,
+and the plugin package carries no license file of its own. Read them in the
+[Fab license documentation](https://dev.epicgames.com/documentation/fab/licenses-and-pricing-in-fab).
 
 ---
 

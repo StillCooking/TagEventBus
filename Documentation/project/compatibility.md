@@ -27,7 +27,9 @@ rarely need anything beyond a recompile.
   project is enough](../start/installation.md#requirements).
 - **Visual Studio, to package a game from a Blueprint-only project.** With the plugin enabled,
   Unreal Engine treats the project as a code project and builds a temporary game target for it.
-- **Gameplay Tags** — an engine plugin; enable it in the Plugins browser.
+- **The `GameplayTagsEditor` engine plugin** — editor only, part of every Unreal Engine install.
+  The debugger's tag pickers use it. `TagEventBus.uplugin` declares it as a dependency, so the
+  engine enables it together with TagEventBus; nothing from it goes into a packaged game.
 - **`TagEventBus` and `GameplayTags` in `Build.cs`** — only if you use the API from C++.
 
 ## What the plugin does not do
@@ -39,7 +41,7 @@ including [the buses the debugger panel does not show](../concepts/debugger.md).
 neither of them carries a date.
 
 Two consequences of that shape have pages of their own: what shipping a game with this plugin
-[does and does not oblige you to](license.md), and how the bus
+[does and does not oblige you to](purchase-and-use.md), and how the bus
 [sits beside the engine's own networking](../advanced/interoperability.md).
 
 ## Known limitations
